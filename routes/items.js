@@ -67,6 +67,13 @@ const deleteItemOpts = {
 //Options for update one
 const updateItemOpts = {
   schema: {
+    body: {
+      type: 'object',
+      required: ['name'],//Make property required, if we dont send it we get bad request 400 error
+      properties: {
+        name: { type: 'string' }
+      }
+    },
     response: {
       200: Item
     },
