@@ -8,6 +8,15 @@
 const fastify = require('fastify')({ logger: true })
 const helmet = require('@fastify/helmet');
 const fastifyCors = require('@fastify/cors');
+const mongoose = require("mongoose");
+require("dotenv").config();
+
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log("Connected to the database"))
+.catch(e => console.log("Error connecting to database", e));
 
 //fastify.register(require('fastify-swagger'), { - depricated
 //  exposeRoute: true,
@@ -17,10 +26,10 @@ const fastifyCors = require('@fastify/cors');
 //  },
 //});
 
-fastify.register(require('@fastify/swagger'))
+fastify.register(require('@fastify/swagger'));
 fastify.register(require('@fastify/swagger-ui'), {
   routePrefix: '/documentation'
-})
+});
 
 fastify.register(helmet, {
   contentSecurityPolicy: {

@@ -1,16 +1,17 @@
 const { getItems, getItem, addItem, deleteItem, updateItem } = require('../controllers/items')
 
 //Item schema
-const Item = {
+const Item = {//VALIDATION, Determines what will be returned
   type: 'object',
   properties: {
     id: {type: 'string'}, //if i comment one of these out the api call will not return it
-    name: {type: 'string'} //if i change type, it will return it as such
+    name: {type: 'string'}, //if i change type, it will return it as such
+    surname: {type: 'string'},
   }
 }
 
 //Options for get all items
-const getItemsOpts = {//VALIDATION, Determines what will be returned
+const getItemsOpts = {
   schema: {
     response: {
       200: {
@@ -37,9 +38,10 @@ const postItemOpts = {
   schema: {
     body: {
       type: 'object',
-      required: ['name'],//Make property required, if we dont send it we get bad request 400 error
+      required: ['name', 'surname'],//Make property required, if we dont send it we get bad request 400 error
       properties: {
-        name: { type: 'string' }
+        name: { type: 'string' },
+        surname: { type: 'string' }
       }
     },
     response: {
@@ -69,9 +71,10 @@ const updateItemOpts = {
   schema: {
     body: {
       type: 'object',
-      required: ['name'],//Make property required, if we dont send it we get bad request 400 error
+      required: ['name', 'surname'],//Make property required, if we dont send it we get bad request 400 error
       properties: {
-        name: { type: 'string' }
+        name: { type: 'string' },
+        surname: { type: 'string' }
       }
     },
     response: {
@@ -83,7 +86,7 @@ const updateItemOpts = {
 
 function itemRoutes (fastify, options, done) {
 
-  fastify.get('/items', getItemsOpts);
+  fastify.get('/items', getItemsOpts);//getItemsOpts is options
   
   fastify.get('/items/:id', getItemOpts);
 
