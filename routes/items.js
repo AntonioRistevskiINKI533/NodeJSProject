@@ -4,7 +4,7 @@ const { getItems, getItem, addItem, deleteItem, updateItem } = require('../contr
 const Item = {//VALIDATION, Determines what will be returned
   type: 'object',
   properties: {
-    id: {type: 'string'}, //if i comment one of these out the api call will not return it
+    _id: {type: 'string'}, //if i comment one of these out the api call will not return it
     name: {type: 'string'}, //if i change type, it will return it as such
     surname: {type: 'string'},
   }
