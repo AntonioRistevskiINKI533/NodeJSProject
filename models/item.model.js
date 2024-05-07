@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const ItemSchema = new mongoose.Schema({
-    _id: {
-        type: String,
-        required: true,
-        trim: true
-    },
+    //_id: {
+    //    type: String,
+    //    required: true,
+    //    trim: true
+    //},
     name: {
         type: String,
         required: true,

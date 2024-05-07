@@ -21,7 +21,7 @@ const addItem = async (req, reply) => {
     const {name} = req.body;
     const {surname} = req.body;
     const newItem = {
-        _id: uuidv4(),
+        id: uuidv4(),
         name,
         surname
     };
