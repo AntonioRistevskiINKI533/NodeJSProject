@@ -68,3 +68,13 @@ fastify.listen({ port: 3000 }, (err) => {
 //Javascript: let age = 30; dynamicly typed
 //Typescript: let age: number = 30; statically typed
 //In statically typed languages, the compiler catches type-related errors before the program runs leading to more reliable code. On the other hand, dynamically typed languages detect type issues at runtime, which might lead to unexpected type errors or behavior during execution.
+
+//The combination of these elements serves different purposes:
+//
+//Type Annotation (<{ Params: GetByIdType; Reply: CustomerItemResponseType; }>):
+//Ensures type safety within the route handler function itself.
+//Helps developers understand what kind of objects the handler expects and returns.
+//
+//Schema Definitions (params and response within schema):
+//Provides validation for incoming request parameters (params) based on the defined schema.
+//Describes the structure of the response (response) for documentation and validation purposes.
