@@ -63,3 +63,8 @@ fastify.listen({ port: 3000 }, (err) => {
 //For fastify.decorate in projects: The decorators API allows customization of the core Fastify objects, such as the server instance itself and any request and reply objects used during the HTTP request lifecycle. The decorators API can be used to attach any type of property to the core objects, e.g. functions, plain objects, or native types.
 
 //sudo systemctl restart mongod - when mongo wont connect
+
+//No, JavaScript does not directly support static type annotations like let age: number = 30; because JavaScript itself is a dynamically typed language. In JavaScript, variables are not explicitly declared with a specific type at compile time; instead, their types are determined dynamically at runtime based on the assigned values.
+//Javascript: let age = 30; dynamicly typed
+//Typescript: let age: number = 30; statically typed
+//In statically typed languages, the compiler catches type-related errors before the program runs leading to more reliable code. On the other hand, dynamically typed languages detect type issues at runtime, which might lead to unexpected type errors or behavior during execution.
