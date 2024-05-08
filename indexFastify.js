@@ -78,3 +78,5 @@ fastify.listen({ port: 3000 }, (err) => {
 //Schema Definitions (params and response within schema):
 //Provides validation for incoming request parameters (params) based on the defined schema.
 //Describes the structure of the response (response) for documentation and validation purposes.
+
+//When a client sends an HTTP request with an "Accept-Encoding" header specifying compression methods it supports (e.g., gzip, deflate, brotli), the @fastify/compress plugin automatically compresses the response payload using one of the supported compression algorithms. This reduces the size of the response data transferred over the network, leading to faster transmission and reduced bandwidth usage.
