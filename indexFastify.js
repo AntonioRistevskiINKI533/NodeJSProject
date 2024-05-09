@@ -93,3 +93,5 @@ fastify.listen({ port: 3000 }, (err) => {
 //}
 
 //console.log(a)
+
+//const regexp = new RegExp(data.term ?? '', 'gi'); g - means dont stop at first match, i - means not sensetive to case
