@@ -32,7 +32,7 @@ const addItem = async (req, reply) => {
 
     //items = [...items, item];
 
-    reply.code(201).send(item);//The 201 Created status code means that the request was successfully fulfilled and resulted in one or possibly multiple new resources being created
+    reply.code(201).send(item);
 }
 
 const deleteItem = async (req, reply) => {
@@ -64,8 +64,6 @@ const updateItem = async (req, reply) => {
     //: item));
     
     //item = items.find((item) => item.id === id);
-
-    //item.name = name; // also works
 
     reply.send(updateItem);
 }

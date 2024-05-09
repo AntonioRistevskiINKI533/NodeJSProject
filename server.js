@@ -1,9 +1,4 @@
-//fastify
-//fastify-swagger
-//uuid
-//npm i -D nodemon --On the other hand, `npm i -D` is a variation of `npm install` with the `-D` flag, where `-D` stands for `--save-dev`. This flag is used to install packages as development dependencies
 //npm run dev - start project
-//nodemon is a tool that helps develop Node.js based applications by automatically restarting the node application when file changes in the directory are detected.
 
 const fastify = require('fastify')({ logger: true })
 const helmet = require('@fastify/helmet');

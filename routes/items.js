@@ -86,7 +86,7 @@ const updateItemOpts = {
 
 function itemRoutes (fastify, options, done) {
 
-  fastify.get('/items', getItemsOpts);//getItemsOpts is options
+  fastify.get('/items', getItemsOpts);
   
   fastify.get('/items/:id', getItemOpts);
 
